@@ -1,171 +1,204 @@
+:root {
+    --darkest-night: hsl(270, 6%, 6%);
+    --darker-night: hsl(270, 10%, 20%);
+    --dark-night: hsl(270, 15%, 30%);
+    --lightest-day: hsl(226, 0%, 91%);
+    --lighter-day: hsl(226, 70%, 86%);
+    --light-day: hsl(226, 90%, 72%);
+    --green-leaf: hsl(120, 70%, 86%);
+    --green-bull: hsl(120, 90%, 72%);
+    --red-leaf: hsl(0, 70%, 86%);
+    --red-bull: hsl(0, 90%, 72%);
+    --just-white: hsl(0, 2%, 98%);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: var(--darkest-night);
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, hsl(0, 60%, 78%) 0%, hsl(160, 0%, 75%) 19%, hsl(192, 66%, 61%) 42%, hsl(261, 39%, 74%) 79%, hsl(192, 53%, 63%) 100%);
 }
 
 body, input, button {
     font-family: 'Open Sans', sans-serif;
 }
 
-input, button {
-    font-size: 16px;
-}
-
-.head_bar {
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: cornflowerblue;
-    color: white;
-}
-
 main {
     max-width: 800px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    padding: 16px;
-
+    padding-inline: 1rem;
 }
 
+section {
+    padding: 1.2rem;
+    background-color: var(--lightest-day);
+    border-radius: 0.6rem;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--darker-night);
+    text-align: center;
+}
+
+h3 {
+    color: var(--darker-night);
+}
+
+p {
+    color: var(--dark-night);
+}
+
+input,
+button {
+    font-size: 1rem;
+    border: 1px solid var(--darkest-night);
+}
+
+input[type="checkbox"] {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+}
+
+button {
+    color: var(--darkest-night);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    padding: 0.6rem;
+    min-width: 8rem;
+    width: fit-content;
+    display: block;
+    height: fit-content;
+}
+
+button:focus {
+    border: 2px solid var(--darkest-night);
+}
+
+/* head bar */
+.head_bar {
+    padding: 0.8rem;
+    text-align: center;
+}
+.head_bar__title {
+    color: var(--lightest-day);
+    text-transform: uppercase;
+}
+
+/* inputs */
 .input_section {
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    border: 1px solid black;
-    border-radius: 10px;
 }
-
-.input_section > h2 {
-    text-align: center;
-    color: cornflowerblue;
+.input_group label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
 }
-
-.input_section > form > .input {
-    margin: 8px 0;
+.input_group,
+.input_inline {
+    margin-bottom: 1rem;
 }
-
-.input_section > form > button {
-    background-color: cornflowerblue;
-    color: white;
-    border: 0;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-    padding: 8px;
-    cursor: pointer;
-}
-
-.input_section > form > button > span {
-    font-weight: bold;
-}
-
-.input_section > form > .input > input {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-}
-
-
-.input_section > form > .input > label {
-    color: cornflowerblue;
-    font-weight: bold;
-}
-
-.input_section > form > .input_inline {
-    margin: 12px 0;
+.input_section .input_inline {
     display: flex;
-    align-items: center;
+    column-gap: 1rem;
+}
+.input_group > input[type="checkbox"] {
+    width: fit-content;
 }
 
-.input_section > form > .input_inline > label {
-    color: cornflowerblue;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.search_section {
-    margin: 16px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
+/* input & search sections */
+.input_section > h2,
 .search_section > h2 {
-    color: cornflowerblue;
+    text-align: center;
 }
 
-.search_section > form {
-    padding: 16px;
+/* book section */
+.book_item {
+    border-radius: 0.3rem;
+    padding-block: 0.6rem;
+}
+.book_item:hover {
+    padding-inline: 0.6rem;
+    background-color: var(--just-white);
+    transition: 0.3s ease-in-out;
+    transform: scale(1.08);
+}
+.book_info {
     width: 100%;
-    display: grid;
-    grid-template-columns: auto 1fr 0.5fr;
-    grid-gap: 10px;
+    margin-bottom: 1rem;
 }
 
-.search_section > form > label {
+/* buttons */
+.button_container {
     display: flex;
+    width: 100%;
+    justify-content: end;
     align-items: center;
+    column-gap: 0.6rem;
+}
+.blue_button {
+    background-color: var(--lighter-day);
+}
+.blue_button:hover {
+    transition: 0.2s ease-in-out;
+    background-color: var(--light-day);
+}
+.green_button {
+    background-color: var(--green-leaf);
+}
+.green_button:hover {
+    transition: 0.2s ease-in-out;
+    background-color: var(--green-bull);
+}
+.red_button {
+    background-color: var(--red-leaf);
+}
+.red_button:hover {
+    transition: 0.2s ease-in-out;
+    background-color: var(--red-bull);
 }
 
-.search_section > form > input {
-    padding: 5px;
-    border-radius: 5px;
-}
 
-.search_section > form > button {
-    background-color: cornflowerblue;
-    color: white;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-}
+@media (min-width: 50rem) {
+    /* inputs */
+    .input_group {
+        display: grid;
+        grid-template-columns: 18% 82%;
+    }
+    .input_group label {
+        display: flex;
+        align-self: center;
+        margin-bottom: 0;
+    }
 
-.book_shelf {
-    margin: 16px 0 0 0;
-    border: 1px solid black;
-    padding: 16px;
-    border-radius: 10px;
-}
-
-.book_shelf > h2 {
-    color: cornflowerblue;
-}
-
-.book_shelf > .book_list {
-    padding: 16px;
-}
-
-.book_shelf > .book_list > .book_item {
-    padding: 8px 16px 16px 16px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.book_shelf > .book_list > .book_item > h3, p {
-    margin: 8px 0;
-}
-
-.book_shelf > .book_list > .book_item > .action > button {
-    border: 0;
-    padding: 5px;
-    margin: 0 5px 0 0;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.book_shelf > .book_list > .book_item > .action > .green {
-    background-color: darkgreen;
-    color: white;
-}
-
-.book_shelf > .book_list > .book_item > .action > .red {
-    background-color: darkred;
-    color: white;
+    /* book section */
+    .book_item {
+        display: grid;
+        grid-template-columns: 82% 18%;  
+    }
+    .book_info {
+        padding-right: 1rem;
+        margin-bottom: 0;
+    }
+    .book_item .button_container {
+        flex-direction: column;
+        row-gap: 0.6rem;
+    }
 }
