@@ -132,9 +132,8 @@ button:focus {
     width: fit-content;
 }
 
-/* input & search sections */
-.input_section > h2,
-.search_section > h2 {
+/* input sections */
+.input_section {
     text-align: center;
 }
 

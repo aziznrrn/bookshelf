@@ -36,62 +36,18 @@
                     <label for="inputBookIsComplete">Selesai dibaca</label>
                 </div>
                 <div class="button_container">
+                    <button id="bookReset" type="reset" class="red_button">Batal</button>
                     <button id="bookSubmit" type="submit" class="blue_button">Masukkan buku ke rak</button>
                 </div>    
             </form>
         </section>
-        <section class="search_section">
-            <h2>Cari Buku</h2>
-            <form id="searchBook">
-                <div class="input_group">
-                    <label for="searchBookTitle">Judul</label>
-                    <input id="searchBookTitle" type="text">
-                </div>
-                <div class="button_container">
-                    <button id="searchSubmit" type="submit" class="blue_button">Cari</button>
-                </div>
-            </form>
-        </section>
         <section class="book_shelf">
             <h2>Belum selesai dibaca</h2>
-            <div id="incompleteBookshelfList" class="book_list">
-                <article class="book_item">
-                    <div class="book_info">
-                        <h3>Kiat Sukses Hancur Lebur (2016)</h3>
-                        <p>Martin Suryajaya</p>
-                    </div>
-                    <div class="button_container">
-                        <button class="green_button">Selesai</button>
-                        <button class="red_button">Hapus</button>
-                    </div>
-                </article>
-                <hr>
-                <article class="book_item">
-                    <div class="book_info">
-                        <h3>The Silmarillion (1977)</h3>
-                        <p>J.R.R. Tolkien,  Christopher Tolkien (Editor), Ted Nasmith (Illustrator)</p>
-                    </div>
-                    <div class="button_container">
-                        <button class="green_button">Selesai</button>
-                        <button class="red_button">Hapus</button>
-                    </div>
-                </article>
-            </div>
+            <div id="incompleteBookshelfList" class="book_list"></div>
         </section>
         <section class="book_shelf">
             <h2>Selesai dibaca</h2>
-            <div id="completeBookshelfList" class="book_list">
-                <article class="book_item">
-                    <div class="book_info">
-                        <h3>The Refusal of Work: Rethinking Post-Work Theory and Practice (2015)</h3>
-                        <p>David Frayne</p>
-                    </div>
-                    <div class="button_container">
-                        <button class="green_button">Belum selesai</button>
-                        <button class="red_button">Hapus</button>
-                    </div>
-                </article>
-            </div>
+            <div id="completeBookshelfList" class="book_list"></div>
         </section>
     </main>
     <script src="main.js"></script>
